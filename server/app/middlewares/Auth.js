@@ -16,7 +16,10 @@ module.exports = {
 
     attach: {
         default: (app) => {
-            controller.init(app);
+            controller.init(app, process.env.ENVIRONMENT);
+        },
+        m2m: (app) => {
+            controller.init(app, process.env.ENVIRONMENT, "m2m");
         }
     }
 
