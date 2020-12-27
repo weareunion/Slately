@@ -24,7 +24,7 @@ const bodyParser = require('body-parser');
  * */
 
 const rollbar = require('./app/services/Rollbar/rollbar');
-rollbar.info("Strapping new server...");
+rollbar.info("Strapping new backend server...");
 /**
  *  --- Dependencies ---
  *      **SECURITY**
@@ -64,8 +64,6 @@ app.get('/', (req, res) => {
 });
 
 
-
-
 // Connect to DB
 mongoose.connect(process.env.SLATELY_NETWORK_DB_MONGO_GENERAL_EXTERNAL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     // Log to Console
@@ -74,13 +72,8 @@ mongoose.connect(process.env.SLATELY_NETWORK_DB_MONGO_GENERAL_EXTERNAL, { useNew
 
 
 
-// Routes
-app.get('/', (req, res) => {
-    res.send('We are on home');
 
-})
-
-app.listen(3000);
+app.listen(process.env.SERVER_PORT);
 
 // Log
-rollbar.info("Server started on port 3000");
+rollbar.info("Backend server started on port " + process.env.SERVER_PORT);

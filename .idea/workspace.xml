@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4c9a640-7020-42f0-90db-c555a3c2c54f" name="Default Changelist" comment="" />
+    <list default="true" id="a4c9a640-7020-42f0-90db-c555a3c2c54f" name="Default Changelist" comment="Initial">
+      <change afterPath="$PROJECT_DIR$/webclient/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/Auth/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/Auth/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/middlewares/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/middlewares/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/services/Rollbar/rollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/services/Rollbar/rollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +53,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.19.9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webclient" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,11 +69,81 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webclient" />
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/app/services/Files/helpers" />
       <recent name="$PROJECT_DIR$/server/app/services/Files" />
       <recent name="$PROJECT_DIR$/server/app/services/Files/Local" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Start Backend Development">
+    <configuration name="Start Development Stack" type="CompoundRunConfigurationType">
+      <toRun name="Start Client Production" type="js.build_tools.npm" />
+      <toRun name="Start Backend Production" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Production Stack" type="CompoundRunConfigurationType">
+      <toRun name="Start Client Production" type="js.build_tools.npm" />
+      <toRun name="Start Backend Production" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="Start Client Production" type="js.build_tools.npm" />
+      <toRun name="Start Backend Production" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Backend Development" type="js.build_tools.npm" singleton="false">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Backend Production" type="js.build_tools.npm" singleton="false">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Client Development" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/webclient/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Client Production" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/webclient/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Start Development Stack" />
+      <item itemvalue="Compound.Start Production Stack" />
+      <item itemvalue="Node.js.bin/www" />
+      <item itemvalue="npm.Start Backend Production" />
+      <item itemvalue="npm.Start Backend Development" />
+      <item itemvalue="npm.Start Client Production" />
+      <item itemvalue="npm.Start Client Development" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -80,7 +163,7 @@
       <workItem from="1608663427869" duration="9756000" />
       <workItem from="1609026841559" duration="24000" />
       <workItem from="1609026998667" duration="28000" />
-      <workItem from="1609027230275" duration="394000" />
+      <workItem from="1609027230275" duration="6027000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1609025678629</created>
@@ -89,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609025678629</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial">
+      <created>1609027796104</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609027796104</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
