@@ -49,6 +49,11 @@ const app = express();
 // Add dotenv
 require('dotenv/config');
 
+// Connect to DB
+mongoose.connect(process.env.SLATELY_NETWORK_DB_MONGO_GENERAL_EXTERNAL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+    // Log to Console
+    console.log('[Slately][Mongoose] Connection status: ' + mongoose.STATES[mongoose.connection.readyState])
+});
 
 /**
  *  --- Load Middleware ---
@@ -64,16 +69,24 @@ app.get('/', (req, res) => {
 });
 
 
-// Connect to DB
-mongoose.connect(process.env.SLATELY_NETWORK_DB_MONGO_GENERAL_EXTERNAL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-    // Log to Console
-    console.log('[Slately][Mongoose] Connection status: ' + mongoose.STATES[mongoose.connection.readyState])
-});
+/**
+ *  --- Load Controllers ---
+ * */
+
+const ControllerLoader = require("./app/loaders/LoadControllers");
+
+ControllerLoader.load(app);
 
 
 
 
-app.listen(process.env.SERVER_PORT);
+
+
+
 
 // Log
-rollbar.info("Backend server started on port " + process.env.SERVER_PORT);
+app.listen(process.env.SERVER_PORT);
+console.log("Backend server starting on port " + process.env.SERVER_PORT + " in environment " + process.env.ENVIRONMENT + " in the phase of " + process.env.STAGE);
+
+
+

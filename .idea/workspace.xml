@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4c9a640-7020-42f0-90db-c555a3c2c54f" name="Default Changelist" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/webclient/.env" afterDir="false" />
+    <list default="true" id="a4c9a640-7020-42f0-90db-c555a3c2c54f" name="Default Changelist" comment="Changed default Port for client">
+      <change afterPath="$PROJECT_DIR$/documentation/APIv1/RESTResponseTemplates.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/app/controllers/API/v1/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/app/loaders/LoadControllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/app/services/Response/ResponseTemplateManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/app/services/Response/ResponseTemplates.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controllers/Auth/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/Auth/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/Auth/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/services/Auth/AuthenticationService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/middlewares/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/middlewares/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/services/Rollbar/rollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/services/Rollbar/rollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +73,14 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/app/controllers/API/v1" />
+      <recent name="$PROJECT_DIR$/server/app/controllers/API" />
+      <recent name="$PROJECT_DIR$/server/app/services/Auth" />
       <recent name="$PROJECT_DIR$/server/app/services/Files/helpers" />
       <recent name="$PROJECT_DIR$/server/app/services/Files" />
-      <recent name="$PROJECT_DIR$/server/app/services/Files/Local" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Start Backend Development">
+  <component name="RunManager" selected="Compound.Start Development Stack">
     <configuration name="Start Development Stack" type="CompoundRunConfigurationType">
       <toRun name="Start Client Production" type="js.build_tools.npm" />
       <toRun name="Start Backend Production" type="js.build_tools.npm" />
@@ -163,7 +164,7 @@
       <workItem from="1608663427869" duration="9756000" />
       <workItem from="1609026841559" duration="24000" />
       <workItem from="1609026998667" duration="28000" />
-      <workItem from="1609027230275" duration="6027000" />
+      <workItem from="1609027230275" duration="13698000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1609025678629</created>
@@ -179,7 +180,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609027796104</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Rollbar support">
+      <created>1609033519329</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609033519329</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created Auth middleware and objects">
+      <created>1609033555214</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609033555214</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed default Port for client">
+      <created>1609033580591</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609033580591</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +227,10 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="Added Rollbar support" />
+    <MESSAGE value="Created Auth middleware and objects" />
+    <MESSAGE value="Changed default Port for client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed default Port for client" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
