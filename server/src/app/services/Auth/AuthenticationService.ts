@@ -1,4 +1,4 @@
-module.exports = {
+const AuthenticationService = {
     /**
      * --------------------
      *      Constants
@@ -46,7 +46,7 @@ module.exports = {
      * @param autostart Link middleware once ready
      * @returns {*} Returns app if autostart is true, else function will be returned
      */
-    init: (app,
+    init: (app: any,
            environment =  module.exports.default.default,
            authenticationProtocol =  module.exports.default.authenticationProtocol,
            type = 'web',
@@ -104,19 +104,21 @@ module.exports = {
                  * @param port Port that auth will run on
                  * @returns {{clientID: string, issuerBaseURL: string, secret: *}} Auth0 configutation file
                  */
-                create: (environment, baseURL = "", port = process.env.SERVER_PORT) => {
+                create: (environment: string, baseURL = "", port = process.env.SERVER_PORT) => {
                     // If environment is not set, default to .env specification. If that is not known, revert to object environment
-                    environment = environment || (process.env.ENVIRONMENT || this.environment);
+                    environment = environment || (process.env.ENVIRONMENT || AuthenticationService.environment);
 
                     // If the environment process is not set, warn
                     if (process.env.ENVIRONMENT === undefined)
                         module.exports.rollbar.warn(`BEWARE: Server environment could not be pulled from environment. Running as ${environment}.`)
 
                     // Backbone configuration for Auth0
-                    const config = {
+                    const config: any = {
                         secret: process.env.AUTH_AUTH0_SECRET,
                         clientID: 'oFTDbO5in1paYSSfMGmStzm2pcB7oRxm',
-                        issuerBaseURL: 'https://uniongroup.us.auth0.com'
+                        issuerBaseURL: 'https://uniongroup.us.auth0.com',
+                        baseURL: undefined,
+                        authRequired: undefined
                     };
                     if (environment === 'local') {
                         config.baseURL = 'http://localhost:' + process.env.SERVER_PORT;
@@ -138,7 +140,7 @@ module.exports = {
                  * @param config Generated configuration file
                  * @returns {*} App file
                  */
-                attach: (app, config) => {
+                attach: (app: any, config: any) => {
                     // Import auth package from OpenID
                     const {auth} = require('express-openid-connect');
 
@@ -150,4 +152,4 @@ module.exports = {
     }
 
 }
-
+module.exports = AuthenticationService;
